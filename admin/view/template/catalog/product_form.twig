@@ -47,11 +47,12 @@
               </ul>
               <div class="tab-content">{% for language in languages %}
               <div class="form-group">
-                <label class="col-sm-2 control-label" for="input-super-product">Супер товар</label>
-                <div class="col-sm-10">
-                  <input type="checkbox" name="super_product" value="1" id="input-super-product" {% if super_product %}checked="checked"{% endif %} />
-                </div>
-              </div>
+  <label class="col-sm-2 control-label" for="input-super-product">Супер товар</label>
+  <div class="col-sm-10">
+    <input type="checkbox" name="super_product" value="1" {{ super_product ? 'checked' : '' }} />
+  </div>
+</div>
+
                 <div class="tab-pane" id="language{{ language.language_id }}">
                   <div class="form-group required">
                     <label class="col-sm-2 control-label" for="input-name{{ language.language_id }}">{{ entry_name }}</label>

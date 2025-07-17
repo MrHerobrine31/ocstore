@@ -858,6 +858,8 @@ class ControllerCatalogProduct extends Controller {
 	}
 
 	protected function getForm() {
+		$data['super_product'] = isset($this->request->post['super_product']) ? $this->request->post['super_product'] :
+    (isset($product_info) ? $product_info['super_product'] : 0);
 		$data['product_id'] = isset($this->request->get['product_id']) ? (int)$this->request->get['product_id'] : 0;
 		$data['text_form'] = !isset($this->request->get['product_id']) ? $this->language->get('text_add') : $this->language->get('text_edit');
 		
