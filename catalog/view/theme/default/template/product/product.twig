@@ -131,7 +131,15 @@
             <button type="button" data-toggle="tooltip" class="btn btn-default" title="{{ button_wishlist }}" onclick="wishlist.add('{{ product_id }}');"><i class="fa fa-heart"></i></button>
             <button type="button" data-toggle="tooltip" class="btn btn-default" title="{{ button_compare }}" onclick="compare.add('{{ product_id }}');"><i class="fa fa-exchange"></i></button>
           </div>
-          <h1>{{ heading_title }}</h1>
+
+          <h1>
+        {{ heading_title }}
+        </h1>
+        {% if super_product %}
+        <div class="super-product-badge">🔥 Супер товар</div>
+        {% endif %}
+
+
           <ul class="list-unstyled">
             {% if manufacturer %}
             <li>{{ text_manufacturer }} <a href="{{ manufacturers }}">{{ manufacturer }}</a></li>

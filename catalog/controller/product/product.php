@@ -161,6 +161,13 @@ class ControllerProductProduct extends Controller {
 
 		$product_info = $this->model_catalog_product->getProduct($product_id);
 
+		if (!empty($product_info['super_product'])) {
+    	$data['super_product'] = true;
+		} else {
+    	$data['super_product'] = false;
+		}
+
+
     $this->load->model('catalog/product');
     $this->load->model('catalog/category');
 
