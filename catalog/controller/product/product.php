@@ -166,7 +166,7 @@ class ControllerProductProduct extends Controller {
 		} else {
     	$data['super_product'] = false;
 		}
-
+		
 
     $this->load->model('catalog/product');
     $this->load->model('catalog/category');
