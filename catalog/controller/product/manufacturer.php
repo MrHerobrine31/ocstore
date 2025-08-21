@@ -20,6 +20,8 @@ class ControllerProductManufacturer extends Controller {
 			'text' => $this->language->get('text_brand'),
 			'href' => $this->url->link('product/manufacturer')
 		);
+		
+		
 
 		$data['categories'] = array();
 
@@ -126,6 +128,13 @@ class ControllerProductManufacturer extends Controller {
 
 		$manufacturer_info = $this->model_catalog_manufacturer->getManufacturer($manufacturer_id);
 
+		if (isset($this->request->get['super'])) {
+   		$filter_super_product = (int)$this->request->get['super'];
+		} else {
+    	$filter_super_product = 0;
+		}
+
+
 		if ($manufacturer_info) {
 
 			if ($manufacturer_info['meta_title']) {
@@ -178,14 +187,25 @@ class ControllerProductManufacturer extends Controller {
 				'href' => $this->url->link('product/manufacturer/info', 'manufacturer_id=' . $this->request->get['manufacturer_id'] . $url)
 			);
 
+			
+			$data['manufacturer_href'] = $this->url->link('product/manufacturer/info', 'manufacturer_id=' . $manufacturer_id);
+
+
 			$data['text_compare'] = sprintf($this->language->get('text_compare'), (isset($this->session->data['compare']) ? count($this->session->data['compare']) : 0));
 
 			$data['compare'] = $this->url->link('product/compare');
 
 			$data['products'] = array();
 
+			if (isset($this->request->get['super'])) {
+    			$filter_super_product = (int)$this->request->get['super'];
+			} else {
+    			$filter_super_product = 0;
+			}
+
 			$filter_data = array(
 				'filter_manufacturer_id' => $manufacturer_id,
+				'filter_super_product'   => $filter_super_product,
 				'sort'                   => $sort,
 				'order'                  => $order,
 				'start'                  => ($page - 1) * $limit,

@@ -158,6 +158,9 @@ class ModelCatalogProduct extends Model {
 		if (!empty($data['filter_manufacturer_id'])) {
 			$sql .= " AND p.manufacturer_id = '" . (int)$data['filter_manufacturer_id'] . "'";
 		}
+		if (!empty($data['filter_super_product'])) {
+    		$sql .= " AND p.super_product = '1'";
+		}
 
 		$sql .= " GROUP BY p.product_id";
 
