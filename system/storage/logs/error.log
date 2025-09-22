@@ -6,3 +6,5 @@
 2025-06-24 13:41:41 - PHP Notice:  date_default_timezone_set(): Timezone ID 'Europe/Kyiv' is invalid in D:\laragon\www\projects\ocstore\admin\controller\startup\startup.php on line 17
 2025-06-24 13:41:42 - PHP Notice:  date_default_timezone_set(): Timezone ID 'Europe/Kyiv' is invalid in D:\laragon\www\projects\ocstore\admin\controller\startup\startup.php on line 17
 2025-06-24 13:41:54 - PHP Notice:  date_default_timezone_set(): Timezone ID 'Europe/Kyiv' is invalid in D:\laragon\www\projects\ocstore\admin\controller\startup\startup.php on line 17
+2025-09-22 14:50:15 - PHP Notice:  date_default_timezone_set(): Timezone ID 'Europe/Kyiv' is invalid in C:\laragon\www\git\ocstore\catalog\controller\startup\startup.php on line 37
+2025-09-22 14:50:23 - PHP Notice:  date_default_timezone_set(): Timezone ID 'Europe/Kyiv' is invalid in C:\laragon\www\git\ocstore\catalog\controller\startup\startup.php on line 37

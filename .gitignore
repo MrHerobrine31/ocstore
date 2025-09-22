@@ -1,0 +1,4 @@
+.idea/
+system/storage/cache/
+*config.php
+*error.log

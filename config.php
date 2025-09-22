@@ -1,15 +1,15 @@
 <?php
 // HTTP
-define('HTTP_SERVER', 'http://localhost/projects/ocstore/');
+define('HTTP_SERVER', 'http://localhost/git/ocstore/');
 
 // HTTPS
-define('HTTPS_SERVER', 'http://localhost/projects/ocstore/');
+define('HTTPS_SERVER', 'http://localhost/git/ocstore/');
 
 // DIR
-define('DIR_APPLICATION', 'D:/laragon/www/projects/ocstore/catalog/');
-define('DIR_SYSTEM', 'D:/laragon/www/projects/ocstore/system/');
-define('DIR_IMAGE', 'D:/laragon/www/projects/ocstore/image/');
-define('DIR_STORAGE', 'D:/laragon/storage/');
+define('DIR_APPLICATION', 'C:\laragon\www\git\ocstore\catalog/');
+define('DIR_SYSTEM', 'C:\laragon\www\git\ocstore\system/');
+define('DIR_IMAGE', 'C:\laragon\www\git\ocstore\image/');
+define('DIR_STORAGE', 'C:\laragon\www\git\ocstore\system\storage/');
 define('DIR_LANGUAGE', DIR_APPLICATION . 'language/');
 define('DIR_TEMPLATE', DIR_APPLICATION . 'view/theme/');
 define('DIR_CONFIG', DIR_SYSTEM . 'config/');
