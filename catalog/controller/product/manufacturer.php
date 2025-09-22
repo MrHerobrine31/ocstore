@@ -20,8 +20,8 @@ class ControllerProductManufacturer extends Controller {
 			'text' => $this->language->get('text_brand'),
 			'href' => $this->url->link('product/manufacturer')
 		);
-		
-		
+
+
 
 		$data['categories'] = array();
 
@@ -57,6 +57,8 @@ class ControllerProductManufacturer extends Controller {
 	}
 
 	public function info() {
+        $disallow_params = [];
+
 		$this->load->language('product/manufacturer');
 
 		$this->load->model('catalog/manufacturer');
@@ -187,7 +189,7 @@ class ControllerProductManufacturer extends Controller {
 				'href' => $this->url->link('product/manufacturer/info', 'manufacturer_id=' . $this->request->get['manufacturer_id'] . $url)
 			);
 
-			
+
 			$data['manufacturer_href'] = $this->url->link('product/manufacturer/info', 'manufacturer_id=' . $manufacturer_id);
 
 
