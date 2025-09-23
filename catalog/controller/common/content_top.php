@@ -68,7 +68,7 @@ class ControllerCommonContentTop extends Controller {
 			if (isset($part[1])) {
 				$setting_info = $this->model_setting_module->getModule($part[1]);
 
-				if ($setting_info && $setting_info['status']) {
+				if ($setting_info && isset($setting_info['status']) && $setting_info['status']) {
 					$output = $this->load->controller('extension/module/' . $part[0], $setting_info);
 
 					if ($output) {
