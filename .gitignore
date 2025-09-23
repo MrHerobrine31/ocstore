@@ -1,5 +1,6 @@
 .idea/
 system/storage/cache/
+system/vendor/
 /config.php
 admin/config.php
 *error.log
