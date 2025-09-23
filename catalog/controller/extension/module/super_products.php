@@ -8,7 +8,7 @@ class ControllerExtensionModuleSuperProducts extends Controller {
         $order = isset($setting['module_super_products_order']) ? $setting['module_super_products_order'] : 'DESC';
 
 
-        $this->load->model('catalog/super_products');   
+        $this->load->model('catalog/super_products');
         $this->load->model('tool/image');
 
         $filter_data = array(
